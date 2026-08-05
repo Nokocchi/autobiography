@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Autobiography</title>
+
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+
+<header id="site-header">
+    <!-- Rendered by components/header.js -->
+</header>
+
+<main>
+
+    <section class="page-header">
+        <h1>My Story</h1>
+        <p>Welcome to my autobiography.</p>
+    </section>
+
+    <section id="post-container">
+        <!-- Posts are rendered here -->
+    </section>
+
+</main>
+
+<button id="top-button" aria-label="Back to top" hidden>
+    ↑
+</button>
+
+<!-- Shared Modules -->
+<script src="src/js/postRepository.js"></script>
+<script src="src/js/markdown.js"></script>
+
+<!-- Components -->
+<script src="src/js/components/header.js"></script>
+<script src="src/js/components/post.js"></script>
+<script src="src/js/components/topButton.js"></script>
+
+<!-- Page -->
+<script src="src/js/pages/home.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", async () => {
+        await repository.initialize();
+
+        Header.render(document.getElementById("site-header"));
+
+        TopButton.initialize(
+            document.getElementById("top-button")
+        );
+
+        await HomePage.initialize({
+            container: document.getElementById("post-container")
+        });
+    });
+</script>
+
+</body>
+</html>

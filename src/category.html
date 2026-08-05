@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category - My Autobiography</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header id="site-header">
+    <!-- Rendered by components/header.js -->
+</header>
+
+<main>
+
+    <section class="page-header">
+        <h1 id="category-title">Category</h1>
+        <p id="category-description">
+            Browse posts in this category.
+        </p>
+    </section>
+
+    <section id="post-container">
+        <!-- Posts are rendered here -->
+    </section>
+
+</main>
+
+<button id="top-button" aria-label="Back to top" hidden>
+    ↑
+</button>
+
+<!-- Shared Modules -->
+<script src="js/postRepository.js"></script>
+<script src="js/markdown.js"></script>
+
+<!-- Components -->
+<script src="js/components/header.js"></script>
+<script src="js/components/post.js"></script>
+<script src="js/components/topButton.js"></script>
+
+<!-- Page -->
+<script src="js/pages/category.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", async () => {
+
+        await repository.initialize();
+
+        Header.render(
+            document.getElementById("site-header")
+        );
+
+        TopButton.initialize(
+            document.getElementById("top-button")
+        );
+
+        await CategoryPage.initialize({
+            container: document.getElementById("post-container"),
+            title: document.getElementById("category-title"),
+            description: document.getElementById("category-description")
+        });
+
+    });
+</script>
+
+</body>
+</html>

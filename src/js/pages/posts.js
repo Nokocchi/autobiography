@@ -1,4 +1,4 @@
-const CategoryPage = (() => {
+const PostsPage = (() => {
 
     const VALID_TYPES = ["image", "video", "audio", "text"];
 
@@ -13,12 +13,12 @@ const CategoryPage = (() => {
         const type = (params.get("type") || "").toLowerCase();
 
         if (!VALID_TYPES.includes(type)) {
-            title.textContent = "Category Not Found";
-            description.textContent = "The requested category is invalid.";
+            title.textContent = "Type Not Found";
+            description.textContent = "The requested type is invalid.";
 
             container.innerHTML = `
                 <p class="empty-message">
-                    No category was specified.
+                    No type was specified.
                 </p>
             `;
             return;

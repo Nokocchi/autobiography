@@ -22,25 +22,25 @@ const Header = (() => {
                     </li>
 
                     <li>
-                        <a href="category.html?type=image">
+                        <a href="posts.html?type=image">
                             Images
                         </a>
                     </li>
 
                     <li>
-                        <a href="category.html?type=video">
+                        <a href="posts.html?type=video">
                             Videos
                         </a>
                     </li>
 
                     <li>
-                        <a href="category.html?type=audio">
+                        <a href="posts.html?type=audio">
                             Audio
                         </a>
                     </li>
 
                     <li>
-                        <a href="category.html?type=text">
+                        <a href="posts.html?type=text">
                             Text
                         </a>
                     </li>

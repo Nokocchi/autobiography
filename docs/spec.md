@@ -31,7 +31,7 @@ The design should remain intentionally simple and easy to extend.
 project/
 │
 ├── index.html
-├── category.html
+├── posts.html
 ├── random.html
 ├── tag.html
 │
@@ -49,7 +49,7 @@ project/
 │   │
 │   └── pages/
 │         home.js
-│         category.js
+│         posts.js
 │         random.js
 │         tag.js
 │
@@ -219,9 +219,9 @@ This effectively acts as the site's front page.
 
 ---
 
-# Category Pages
+# Posts Pages
 
-There is one category page that can show posts of four different categories:
+There is one posts page that can show posts of four different categories:
 
 * Images
 * Videos
@@ -230,10 +230,10 @@ There is one category page that can show posts of four different categories:
 
 This should be implemented like this:
 
-* category.html?type=image
-* category.html?type=video
-* category.html?type=audio
-* category.html?type=text
+* posts.html?type=image
+* posts.html?type=video
+* posts.html?type=audio
+* posts.html?type=text
 
 Ordering remains newest first.
 
@@ -277,7 +277,7 @@ Ordering is newest first.
 
 # Tag Filtering
 
-The Tag page contains a category filter.
+The Tag page contains a type filter.
 
 Available options
 
@@ -468,7 +468,7 @@ Home
 
 * all posts
 
-Category
+Posts
 
 * filtered by type
 
@@ -479,7 +479,7 @@ Random
 Tag
 
 * filter by tag
-* category filter
+* type filter
 
 ---
 

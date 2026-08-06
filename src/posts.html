@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Category - My Autobiography</title>
+    <title>Posts - My Autobiography</title>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -16,8 +16,8 @@
 <main>
 
     <section class="page-header">
-        <h1 id="category-title">Category</h1>
-        <p id="category-description">
+        <h1 id="post-title">Category</h1>
+        <p id="post-description">
             Browse posts in this category.
         </p>
     </section>
@@ -42,7 +42,7 @@
 <script src="js/components/topButton.js"></script>
 
 <!-- Page -->
-<script src="js/pages/category.js"></script>
+<script src="js/pages/posts.js"></script>
 
 <script>
     document.addEventListener("DOMContentLoaded", async () => {
@@ -57,10 +57,10 @@
             document.getElementById("top-button")
         );
 
-        await CategoryPage.initialize({
+        await PostsPage.initialize({
             container: document.getElementById("post-container"),
-            title: document.getElementById("category-title"),
-            description: document.getElementById("category-description")
+            title: document.getElementById("post-title"),
+            description: document.getElementById("post-description")
         });
 
     });

@@ -1,8 +1,9 @@
 # TODO:
 
-Add `post.html?id=graduation-day` for single post links. 
+Add `posts.html?id=graduation-day` for single post links. 
 
-Posts are now half in posts.js and half in descriptions.js. Posts.js hardcodes the name of the files, but not the path because the path is determined by the post type. Can this be simplified?
+Posts are now half in posts.js and half in descriptions.js and the media is in a third location. Posts.js hardcodes the name of the media file, but not the path because the path is determined by the post type. Can this be simplified?
+It should be as easy as possible to add new posts.
 
 Add Random page
 

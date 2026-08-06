@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Autobiography</title>
 
-    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -31,16 +31,18 @@
 </button>
 
 <!-- Shared Modules -->
-<script src="src/js/postRepository.js"></script>
-<script src="src/js/markdown.js"></script>
+<script src="data/posts.js"></script>
+<script src="data/descriptions.js"></script>
+<script src="js/postRepository.js"></script>
+<script src="js/markdown.js"></script>
 
 <!-- Components -->
-<script src="src/js/components/header.js"></script>
-<script src="src/js/components/post.js"></script>
-<script src="src/js/components/topButton.js"></script>
+<script src="js/components/header.js"></script>
+<script src="js/components/post.js"></script>
+<script src="js/components/topButton.js"></script>
 
 <!-- Page -->
-<script src="src/js/pages/home.js"></script>
+<script src="js/pages/home.js"></script>
 
 <script>
     document.addEventListener("DOMContentLoaded", async () => {
@@ -48,9 +50,7 @@
 
         Header.render(document.getElementById("site-header"));
 
-        TopButton.initialize(
-            document.getElementById("top-button")
-        );
+        //TopButton.initialize(document.getElementById("top-button"));
 
         await HomePage.initialize({
             container: document.getElementById("post-container")

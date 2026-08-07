@@ -9,7 +9,12 @@ const Post = (() => {
         // Title
         const title = document.createElement("h2");
         title.className = "post-title";
-        title.textContent = post.title;
+
+        const titleLink = document.createElement("a");
+        titleLink.href = `posts.html?id=${encodeURIComponent(post.id)}`;
+        titleLink.textContent = post.title;
+
+        title.appendChild(titleLink);
         article.appendChild(title);
 
         // Type Badge

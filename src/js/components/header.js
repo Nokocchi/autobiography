@@ -5,13 +5,9 @@ const Header = (() => {
         container.className = "site-header";
 
         container.innerHTML = `
-            <div class="banner">
-                <a href="index.html" aria-label="Home">
-                    <img src="images/logo.svg" alt="Logo">
-                </a>
-
+            <a class="banner" href="index.html" aria-label="Home">
                 <h1>My Autobiography</h1>
-            </div>
+            </a>
 
             <nav>
                 <ul>
